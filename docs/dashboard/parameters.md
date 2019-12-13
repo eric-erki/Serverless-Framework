@@ -34,3 +34,9 @@ To use a parameter, first make sure that the profile containing that parameter i
 In your `serverless.yml` file add the variable `${param:<key>}` anywhere you would like to use the parameter. The `<key>` references the parameter key configured in the profile.
 
 When you run `serverless deploy` the parameter values will be obtained, decrypted and used to replace the variables in the `serverless.yml` for the deployment.
+
+## Using a Parameter as an environment variable
+
+When using [Serverless CI/CD](/docs/dashboard/cicd/) each of the parameters are also loaded into the CI/CD environment
+as environment variables. Those environment variables become accessible in [custom scripts](/docs/dashboard/cicd/custom-scripts)
+and to the `npm` commands run by CI/CD, including `npm install` and `npm test`.
