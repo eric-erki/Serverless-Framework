@@ -39,24 +39,6 @@ Before you setup your CI/CD workflow, make sure you meet the following requireme
 2. Select the "base directory" containing the `serverless.yml` file. The repository must contain at least one `serverless.yml` and `service` value must match the current service in the dashboard.
 3. Select the “region” for the deployments. Only regions supported by the Serverless Dashboard are currently listed. If you plan to deploy to another region, please reach out sales or support to request support for a new region.
 
-## Custom scripts
-
-Custom scripts in the pipeline are supported using the standard `scripts` in the `package.json` file.
-
-For example, you can run scripts before/after install, and before/after a test.
-
-```yaml
-{
-  'name': 'demo-serverless',
-  'version': '1.0.0',
-  'scripts': { 'preinstall': '', 'postinstall': '', 'pretest': '', 'posttest': '' },
-}
-```
-
-Additional lifecycle hooks can be found in the `npm` documentation:
-
-[https://docs.npmjs.com/misc/scripts](https://docs.npmjs.com/misc/scripts)
-
 ## Deployment settings
 
 If your services depends on settings which are different for each stage, we recommend using [deployment profiles](/framework/docs/dashboard/profiles/) to set different [parameters](https://serverless.com/framework/docs/dashboard/secrets/) for each stage.
