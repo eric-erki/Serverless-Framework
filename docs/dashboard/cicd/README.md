@@ -39,51 +39,6 @@ Before you setup your CI/CD workflow, make sure you meet the following requireme
 2. Select the "base directory" containing the `serverless.yml` file. The repository must contain at least one `serverless.yml` and `service` value must match the current service in the dashboard.
 3. Select the “region” for the deployments. Only regions supported by the Serverless Dashboard are currently listed. If you plan to deploy to another region, please reach out sales or support to request support for a new region.
 
-## Running Tests
-
-The Serverless Framework will automatically run tests for each deployment by running `npm test`. The tests must pass, return `0`, before the service is deployed. If the tests fail, then the service will not be deployed.
-
-The tests only run if a `test` script is present in the `package.json` file, like in the example below:
-
-```json
-{
-  "name": "my-serverless-project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
-}
-```
-
-The tests will be skipped if the `npm test` command returns `Error: no test specified`. This is the response from `npm` if no `test` script is defined. It is also the default value of the `test` script when you initialize a new package.json via `npm init`.
-
-### Running Node tests
-
-If you are using Node for your runtime, then all the dependencies will automatically be installed using `npm install` before tests are run.
-
-Update the `tests` script to run your node test suite (e.g. `mocha`).
-
-### Running Python tests
-
-If you are using Python we recommend using the [serverless-python-requirements](https://github.com/UnitedIncome/serverless-python-requirements) plugin to install the dependencies from `requirements.txt`.
-
-If you are not using the serverless-python-requirements plugin, then you can install the requirements by adding the `postinstall` script to `package.json`.
-
-```yaml
-{
-  'name': 'demo-python',
-  'version': '1.0.0',
-  'scripts': { 'postinstall': 'pip3 install -r requirements.txt', 'test': 'pytest' },
-  'devDependencies': { 'serverless-python-requirements': '^5.0.1' },
-}
-```
-
-You must update the `test` script in `package.json` to run your Python tests suite (e.g. `pytest`).
-
 ## Custom scripts
 
 Custom scripts in the pipeline are supported using the standard `scripts` in the `package.json` file.
