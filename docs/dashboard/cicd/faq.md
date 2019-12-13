@@ -20,14 +20,14 @@ Yes, up to 1 concurrent build with the Free tier. No credit card required, just 
 ## How much does it cost if I need more?
 
 You get one free concurrent deployment with the Free tier. The Team tier includes 2 concurrent builds and you can buy
-more for $25/mo/concurrent build.
+more for \$25/mo/concurrent build.
 
 ## Do you support preview deployments from pull requests?
 
 Yes! You can add preview deployments to your CI/CD Settings. This will automatically test and deploy your service from a
 pull request. The results will be posted in the pull request status. You can also setup auto deletion of deployed
 resources for preview deployments so that “sls remove” is automatically run when your feature branch is merged and
-deleted. 
+deleted.
 
 ## Can I deploy for multiple branches?
 
@@ -62,4 +62,3 @@ Only AWS is supported at this time; however, support for other cloud service pro
 
 Nope! Serverless CI/CD is a 100% SaaS and managed for you. If you prefer to self-host, that is available as an option
 with the Enterprise tier.
-
