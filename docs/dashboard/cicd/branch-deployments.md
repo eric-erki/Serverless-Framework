@@ -1,6 +1,7 @@
 <!--
 title: Serverless Dashboard - CI/CD Branch Deployments
 menuText: Branch Deployments
+menuOrder: 1
 layout: Doc
 -->
 

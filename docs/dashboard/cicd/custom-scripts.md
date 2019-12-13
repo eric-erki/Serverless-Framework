@@ -1,6 +1,7 @@
 <!--
 title: Serverless Dashboard - CI/CD Custom Scripts
 menuText: Custom Scripts
+menuOrder: 3
 layout: Doc
 -->
 

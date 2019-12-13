@@ -1,6 +1,7 @@
 <!--
 title: Serverless Dashboard - Running tests
 menuText: Testing
+menuOrder: 4
 layout: Doc
 -->
 

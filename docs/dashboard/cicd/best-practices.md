@@ -1,6 +1,7 @@
 <!--
 title: Serverless Dashboard - CI/CD Best Practices
 menuText: Best Practices
+menuOrder: 7
 layout: Doc
 -->
 

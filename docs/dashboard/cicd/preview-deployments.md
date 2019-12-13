@@ -1,6 +1,7 @@
 <!--
 title: Serverless Dashboard - CI/CD Preview Deployments
 menuText: Preview Deployments
+menuOrder: 2
 layout: Doc
 -->
 
